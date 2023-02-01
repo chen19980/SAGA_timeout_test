@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "a438de98-1410-46a5-9ebc-494003c6762a",
+		"name": "SAGA測試案例",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22916739"
+	},
+	"item": [
+		{
+			"name": "orderbook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"3000\",\r\n    \"itemName\": \"Laptop\",\r\n    \"quantity\": 1,\r\n    \"amount\": 1.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/camel/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"camel",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

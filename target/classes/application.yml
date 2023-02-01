@@ -1,0 +1,32 @@
+camel:
+  servlet:
+    mapping:
+      context-path: /camel/*
+  springboot:
+    main-run-controller: true
+server:
+  port: 9090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      group:
+        liveness:
+          include: diskSpace,ping
+          show-details: always
+      probes:
+        enabled: true
+
+logging:
+  level:
+    org.springframework: INFO
+    org.apache.camel.spring.boot: INFO
+    org.apache.camel.health: DEBUG
+    org.apache.camel.impl.health: DEBUG
+    org.springframework.web.client: DEBUG
+    org.apache.kafka: ERROR
